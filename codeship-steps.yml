@@ -1,4 +1,4 @@
-type: serial
+- type: serial
   steps:
   - name: packrat
     service: csdockertest
