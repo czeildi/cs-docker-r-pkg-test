@@ -2,7 +2,7 @@
   steps:
   - name: packrat
     service: csdockertest
-    command: R --vanilla --slave -f packrat/init.R --args --bootstrap-packrat
+    command: R -e "packrat::restore()"
   - name: check
     service: csdockertest
     command: R --vanilla --slave -f command_line_check.R
