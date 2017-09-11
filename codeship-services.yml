@@ -2,3 +2,4 @@ csdockertest:
   build:
     image: r-package
     dockerfile: Dockerfile
+  cached: true
