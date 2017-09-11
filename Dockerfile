@@ -24,9 +24,13 @@ RUN cp -r $HOME/cache/packrat/lib-ext /csdockertest/packrat/
 
 ADD ./packrat/packrat.lock /csdockertest/packrat/packrat.lock
 
+RUN ls -la
+
 RUN R -e "0" --args --bootstrap-packrat
 RUN cp -r /csdockertest/packrat/lib $HOME/cache/packrat
 RUN cp -r /csdockertest/packrat/lib-R $HOME/cache/packrat
 RUN cp -r /csdockertest/packrat/lib-ext $HOME/cache/packrat
 
 ADD . /csdockertest
+
+RUN ls -la /dockertest
