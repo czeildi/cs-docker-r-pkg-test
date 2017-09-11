@@ -2,3 +2,7 @@
 ^\.Rproj\.user$
 ^packrat/
 ^\.Rprofile$
+^codeship-services\.yml$
+^codeship-steps\.yml$
+^Dockerfile$
+^command_line_check\.R$
