@@ -1,7 +1,8 @@
-steps:
-- name: packrat
-  service: csdockertest
-  command: R --vanilla --slave -f packrat/init.R --args --bootstrap-packrat
-- name: check
-  service: csdockertest
-  command: R --vanilla --slave -f command_line_check.R
+type: serial
+  steps:
+  - name: packrat
+    service: csdockertest
+    command: R --vanilla --slave -f packrat/init.R --args --bootstrap-packrat
+  - name: check
+    service: csdockertest
+    command: R --vanilla --slave -f command_line_check.R
