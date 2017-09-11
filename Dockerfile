@@ -10,8 +10,16 @@ RUN apt-get update \
   libssl-dev \
   libxml2-dev
 
-Add . /csdockertest
+ADD . /csdockertest
 
+RUN mkdir -p $HOME/cache/packrat/lib
+RUN mkdir -p $HOME/cache/packrat/lib-R
+RUN mkdir -p $HOME/cache/packrat/lib-ext
+RUN cp -r $HOME/cache/packrat/lib /csdockertest/packrat/
+RUN cp -r $HOME/cache/packrat/lib-R /csdockertest/packrat/
+RUN cp -r $HOME/cache/packrat/lib-ext /csdockertest/packrat/
 RUN R -e "0" --args --bootstrap-packrat
-RUN R -e "packrat::restore()"
-
+RUN R -e "packrat::restore(restart = FALSE)"
+RUN cp -r /csdockertest/packrat/lib $HOME/cache/packrat
+RUN cp -r /csdockertest/packrat/lib-R $HOME/cache/packrat
+RUN cp -r /csdockertest/packrat/lib-ext $HOME/cache/packrat
