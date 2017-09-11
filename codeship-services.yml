@@ -1,4 +1,4 @@
 csdockertest:
   build:
-    image: mypackage
+    image: r-package
     dockerfile: Dockerfile
