@@ -33,4 +33,4 @@ RUN cp -r /csdockertest/packrat/lib-ext $HOME/cache/packrat
 
 ADD . /csdockertest
 
-RUN ls -la /dockertest
+RUN ls -la /csdockertest
