@@ -1,4 +1,4 @@
-print(getwd())
+packrat::restore(restart = FALSE)
 check_results <- devtools::check()
 
 print(check_results)
