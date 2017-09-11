@@ -10,9 +10,8 @@ RUN apt-get update \
   libssl-dev \
   libxml2-dev
 
-ADD ./packrat/packrat.lock /csdockertest/packrat/packrat.lock
+Add . /csdockertest
 
 RUN R -e "0" --args --bootstrap-packrat
 RUN R -e "packrat::restore()"
 
-Add . /csdockertest
