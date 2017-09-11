@@ -48,6 +48,11 @@ Source: CRAN
 Version: 2.8.1
 Hash: 5a3f385f21add1e944b93b3cd9ce8b48
 
+Package: data.table
+Source: CRAN
+Version: 1.10.4
+Hash: 2c7c47ccb40d01c7b214c8eff818108d
+
 Package: desc
 Source: CRAN
 Version: 1.1.1
