@@ -11,12 +11,6 @@ RUN apt-get update \
   libxml2-dev
 
 ADD ./packrat/packrat.lock /csdockertest/packrat/packrat.lock
-RUN mkdir -p ./packrat/lib
-RUN mkdir -p ./packrat/lib-ext
-RUN mkdir -p ./packrat/lib-R
-ADD ./packrat/lib /csdockertest/packrat/
-ADD ./packrat/lib-ext /csdockertest/packrat/
-ADD ./packrat/lib-R /csdockertest/packrat/
 
 RUN R -e "0" --args --bootstrap-packrat
 RUN R -e "packrat::restore()"
