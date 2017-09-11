@@ -13,3 +13,4 @@ RUN apt-get update \
   libxml2-dev
 
 RUN R -e "0" --args --bootstrap-packrat
+RUN R -e "packrat::restore()"

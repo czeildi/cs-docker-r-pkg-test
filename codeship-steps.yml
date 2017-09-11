@@ -1,8 +1,5 @@
 - type: serial
   steps:
-  - name: packrat
-    service: csdockertest
-    command: R -e "packrat::restore()"
   - name: check
     service: csdockertest
     command: R --vanilla --slave -f command_line_check.R
