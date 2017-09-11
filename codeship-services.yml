@@ -1,6 +1,4 @@
-version: '2'
-
-services:
-  csdockertest:
-    build:
-        dockerfile: Dockerfile
+csdockertest:
+  build:
+    image: mypackage
+    dockerfile: Dockerfile
