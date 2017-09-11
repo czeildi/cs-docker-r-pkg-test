@@ -1,3 +1,4 @@
+print(getwd())
 check_results <- devtools::check()
 
 print(check_results)
