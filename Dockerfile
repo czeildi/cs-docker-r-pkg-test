@@ -11,8 +11,6 @@ RUN apt-get update \
   libxml2-dev
 
 ADD ./packrat /csdockertest/packrat
-ADD ./.Rprofile /csdockertest/
-
-RUN R -e "0" --args --bootstrap-packrat
+RUN R --vanilla --slave -f "packrat/init.R" --args --bootstrap-packrat
 
 ADD . /csdockertest
