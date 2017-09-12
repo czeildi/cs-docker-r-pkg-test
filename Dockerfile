@@ -1,8 +1,5 @@
 FROM rocker/r-ver:latest
 
-RUN mkdir /csdockertest
-WORKDIR /csdockertest
-
 RUN apt-get update \
   && apt-get install -y --no-install-recommends \
   libcurl4-openssl-dev \
@@ -10,7 +7,10 @@ RUN apt-get update \
   libssl-dev \
   libxml2-dev
 
-ADD ./packrat /csdockertest/packrat
+RUN mkdir /rpkg
+WORKDIR /rpkg
+
+ADD ./packrat /rpkg/packrat
 RUN R --vanilla --slave -f "packrat/init.R" --args --bootstrap-packrat
 
-ADD . /csdockertest
+ADD . /rpkg

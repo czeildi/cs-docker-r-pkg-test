@@ -1,5 +1,5 @@
-csdockertest:
+rpkg:
   build:
-    image: r-package
+    image: rpkg
     dockerfile: Dockerfile
   cached: true

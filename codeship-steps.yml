@@ -1,5 +1,5 @@
 - type: serial
   steps:
   - name: check
-    service: csdockertest
-    command: Rscript command_line_check.R
+    service: rpkg
+    command: Rscript codeship-check.R
