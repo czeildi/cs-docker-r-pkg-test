@@ -6,3 +6,4 @@
 ^codeship-steps\.yml$
 ^Dockerfile$
 ^command_line_check\.R$
+^\.dockerignore$
