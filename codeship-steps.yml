@@ -5,4 +5,4 @@
     command: Rscript codeship-check.R
   - name: build
     service: rpkg
-    command: R -e "devtools::build()"
+    command: R -e 'devtools::build()'
