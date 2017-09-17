@@ -3,6 +3,3 @@
   - name: check
     service: rpkg
     command: Rscript codeship-check.R
-  - name: build
-    service: rpkg
-    command: R -e 'devtools::build()'
